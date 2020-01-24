@@ -1,0 +1,20 @@
+From start of test beam until October 23 at 11 PM, noise was really high so most data can be ignored. 
+After that, Brian improved the grounding and we are able to work with the default VFAT2 parameters at a threshold of 20 for the VFAT2s. We also started using the AMC13 triggers instead of the external triggers. 
+
+The efficiency of the chambers got up to 60-70% while noise remained below 10%. The latency with the AMC13 is of 28. 
+
+The first good latency scans are: 
+15-10-23-23-44-28_GEM0_LATENCY_SCAN_AFTER_GROUNDING_T20_780uA.txt
+15-10-23-23-44-31_GEM1_LATENCY_SCAN_AFTER_GROUNDING_T20_780uA.txt
+
+A screenshot is:
+15-10-23-23-44-28_GEM01_LATENCY_SCAN_AFTER_GROUNDING_T20.png
+
+The VFAT2 parameters were:
+15-10-23-23-46-06_GEM0_LATENCY_SCAN_AFTER_GROUNDING.txt
+15-10-23-23-46-34_GEM1_LATENCY_SCAN_AFTER_GROUNDING.txt
+
+We are doing a TDC run at different HVs so no tracking data with this at the moment.
+Threshold scans will be done later also.
+
+------------------------------------------------------------------------------------------------------

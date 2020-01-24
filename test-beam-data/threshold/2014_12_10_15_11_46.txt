@@ -1,0 +1,4 @@
+Time	2014/12/10 15:11:46
+Started a threshold scan on VFAT2 #12 from 0 to 25 with 100 events
+--- VFAT2 #12 configuration ---
+--- Data points ---

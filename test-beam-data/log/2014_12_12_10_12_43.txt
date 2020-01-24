@@ -1,0 +1,18 @@
+Time	2014/12/12 10:12:43
+Changed parameters of the system
+--- Old configuration ---
+oh_cdce_src_select	1
+oh_vfat2_fallback	0
+oh_vfat2_src_select	35161331
+oh_sbit_select	0
+glib_sbit_select	0
+oh_cdce_fallback	1889047029
+oh_trigger_source	2
+--- New configuration ---
+oh_cdce_src_select	1
+oh_vfat2_fallback	0
+oh_vfat2_src_select	1
+oh_sbit_select	0
+glib_sbit_select	0
+oh_cdce_fallback	0
+oh_trigger_source	2

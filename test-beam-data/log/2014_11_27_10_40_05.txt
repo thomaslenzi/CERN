@@ -1,0 +1,9 @@
+Time;2014/11/27 10:40:05
+System configuration changed
+oh_trigger_source;1
+glib_sbit_select;3
+oh_sbit_select;3
+oh_vfat2_src_select;1
+oh_vfat2_fallback;0
+oh_cdce_src_select;1
+oh_cdce_fallback;0

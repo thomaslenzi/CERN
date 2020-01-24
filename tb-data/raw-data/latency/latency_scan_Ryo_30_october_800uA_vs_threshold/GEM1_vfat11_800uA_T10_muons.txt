@@ -1,0 +1,47 @@
+Type	latency
+OptoHybrid	1
+VFAT2	11
+min	0
+max	20
+step	1
+n	5000
+----
+slot	11
+ctrl0	55
+ctrl1	0
+ctrl2	48
+ctrl3	0
+iPreampIn	168
+iPremapFeed	80
+iPreampOut	150
+iShaper	150
+iShaperFeed	100
+iComp	75
+chipId0	175
+chipId1	254
+latency	11
+vthreshold1	10
+vthreshold2	0
+vcal	0
+calphase	0
+----
+1268
+16778356
+33555673
+50333194
+67110406
+83887745
+100665014
+117442028
+134219208
+150997357
+167776952
+184554213
+201331428
+218107912
+234882117
+251659075
+268436392
+285213616
+301990771
+318768040

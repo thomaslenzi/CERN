@@ -1,0 +1,16 @@
+########################################
+## Controller: Internal Timing
+########################################
+
+## The controller clock PERIOD constraint is propagated into the controller
+## from the system level design example, where a PERIOD constraint is applied
+## on the external clock input pin.
+
+## The FRAME_ECC primitive is not considered a synchronous timing point,
+## although it is.  As a result, paths between FRAME_ECC and the controller
+## are not analyzed by the PERIOD constraint.  These constraints are placed
+## to supplement the PERIOD coverage to ensure the nets are fully constrained.
+
+INST "sem_inst/frame_ecc_inst" TPSYNC = FECC_SPECIAL ;
+TIMESPEC "TS_FECC_SYNC" = FROM "FECC_SPECIAL" TO FFS(*) 122000 ps ;
+TIMESPEC "TS_FECC_PADS" = FROM "FECC_SPECIAL" TO PADS(*) 250000 ps ;

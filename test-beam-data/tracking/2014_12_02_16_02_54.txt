@@ -1,0 +1,31 @@
+Time;2014/12/02 16:02:54
+Run number;100
+-----
+-----
+latency;0
+ipreampfeed;80
+chipid1;254
+hitcount1;0
+hitcount0;64
+vcal;0
+icomp;75
+chipid0;144
+ishaper;150
+vthreshold2;0
+ishaperfeed;100
+ipreampin;168
+vthreshold1;0
+ipreampout;150
+calphase;0
+upsetreg;0
+hitcount2;0
+ctrl0;55
+ctrl1;0
+ctrl2;48
+ctrl3;0
+-----
+-----
+-----
+-----
+-----
+3265;235;2816;11001000000110011000001001011111100000010000101011101111111110010000010101010000001001010100010010001111101011001100010011011011;35407;458848825

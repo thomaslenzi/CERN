@@ -1,0 +1,55 @@
+Time	2014/12/10 22:35:05
+Started a latency scan on VFAT2 #8 from 0 to 30 with 100 events
+--- VFAT2 #8 configuration ---
+latency	20
+ipreampfeed	80
+chipid1	240
+hitcount1	0
+hitcount0	7
+vcal	0
+icomp	75
+chipid0	235
+ishaper	150
+vthreshold2	0
+ishaperfeed	100
+ipreampin	168
+vthreshold1	25
+ipreampout	150
+calphase	0
+upsetreg	255
+hitcount2	0
+ctrl0	55
+ctrl1	0
+ctrl2	48
+ctrl3	0
+--- Data points ---
+0	0.05
+1	0.08
+2	0.05
+3	0.05
+4	0.1
+5	0.07
+6	0.1
+7	0.03
+8	0.08
+9	0.12
+10	0.35
+11	0.47
+12	0.48
+13	0.5
+14	0.24
+15	0.05
+16	0.07
+17	0.12
+18	0.11
+19	0.07
+20	0.08
+21	0.07
+22	0.07
+23	0.07
+24	0.08
+25	0.09
+26	0.06
+27	0.08
+28	0.04
+29	0.12

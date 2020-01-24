@@ -1,0 +1,35 @@
+#
+# pin constraints
+#
+NET CLK_N LOC = "K16";
+NET CLK_P LOC = "K15";
+NET Ethernet_Lite_COL LOC = "L14";
+NET Ethernet_Lite_CRS LOC = "M13";
+NET Ethernet_Lite_MDC LOC = "N14";
+NET Ethernet_Lite_MDIO LOC = "P16";
+NET Ethernet_Lite_PHY_RST_N LOC = "L13"  |  TIG;
+NET Ethernet_Lite_RXD[0] LOC = "M14";
+NET Ethernet_Lite_RXD[1] LOC = "U18";
+NET Ethernet_Lite_RXD[2] LOC = "U17";
+NET Ethernet_Lite_RXD[3] LOC = "T18";
+NET Ethernet_Lite_RX_CLK LOC = "L16";
+NET Ethernet_Lite_RX_DV LOC = "N18";
+NET Ethernet_Lite_RX_ER LOC = "P17";
+NET Ethernet_Lite_TXD[0] LOC = "F8";
+NET Ethernet_Lite_TXD[1] LOC = "G8";
+NET Ethernet_Lite_TXD[2] LOC = "A6";
+NET Ethernet_Lite_TXD[3] LOC = "B6";
+NET Ethernet_Lite_TX_CLK LOC = "B9";
+NET Ethernet_Lite_TX_EN LOC = "B8";
+NET RESET LOC = "N4"  |  TIG;
+NET RS232_Uart_1_sin LOC = "K14";
+NET RS232_Uart_1_sout LOC = "L12";
+NET rzq IOSTANDARD = "LVCMOS18_JEDEC";
+NET zio IOSTANDARD = "LVCMOS18_JEDEC";
+#
+# additional constraints
+#
+
+NET "CLK" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 200000 kHz;
+

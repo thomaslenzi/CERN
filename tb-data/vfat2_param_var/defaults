@@ -1,0 +1,19 @@
+Register 	Value 	Edit
+Control Register 0 	55 	
+Control Register 1 	0 	
+Control Register 2 	48 	
+Control Register 3 	0 	
+ChipID0 	175 	
+ChipID1 	250 	
+Parameter 	Value 	Edit
+IPreampIn 	168 	
+IPreampFeed 	80 	
+IPreampOut 	150 	
+IShaper 	150 	
+IShaperFeed 	100 	
+IComp 	75 	
+Latency 	5 	
+VThreshold1 	50 	
+VThreshold2 	0 	
+VCal 	100 	
+Calibration Phase 	0 	

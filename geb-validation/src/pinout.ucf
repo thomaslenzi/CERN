@@ -1,0 +1,115 @@
+NET "clk_40MHz_i"           LOC = P23;
+
+
+NET "leds_o<0>"             LOC = P56;
+NET "leds_o<1>"             LOC = P55;
+NET "leds_o<2>"             LOC = P51;
+NET "leds_o<3>"             LOC = P50;
+
+
+NET "sws_i<0>"              LOC = P39;
+NET "sws_i<1>"              LOC = P40;
+
+
+NET "dac_sync_o"            LOC = P120;
+NET "dac_sclk_o"            LOC = P119;
+NET "dac_data_o"            LOC = P118;
+
+
+NET "adc_scl_o"             LOC = P117;
+NET "adc_sda_io"            LOC = P116;
+NET "adc_rdy_i"             LOC = P115;
+
+
+NET "fpga_io<0>"            LOC = P105;
+NET "fpga_io<1>"            LOC = P104;
+NET "fpga_io<2>"            LOC = P102;
+NET "fpga_io<3>"            LOC = P101;
+NET "fpga_io<4>"            LOC = P100;
+NET "fpga_io<5>"            LOC = P99;
+NET "fpga_io<6>"            LOC = P98;
+NET "fpga_io<7>"            LOC = P97;
+NET "fpga_io<8>"            LOC = P95;
+NET "fpga_io<9>"            LOC = P94;
+NET "fpga_io<10>"           LOC = P93;
+NET "fpga_io<11>"           LOC = P92;
+NET "fpga_io<12>"           LOC = P35;
+NET "fpga_io<13>"           LOC = P34;
+NET "fpga_io<14>"           LOC = P33;
+NET "fpga_io<15>"           LOC = P32;
+NET "fpga_io<16>"           LOC = P30;
+NET "fpga_io<17>"           LOC = P29;
+NET "fpga_io<18>"           LOC = P27;
+NET "fpga_io<19>"           LOC = P26;
+NET "fpga_io<20>"           LOC = P24;
+
+
+NET "vfat2_sbits_p_i<0>"    LOC = P22;
+NET "vfat2_sbits_n_i<0>"    LOC = P21;
+
+NET "vfat2_sbits_p_i<1>"    LOC = P17;
+NET "vfat2_sbits_n_i<1>"    LOC = P16;
+
+NET "vfat2_sbits_p_i<2>"    LOC = P15;
+NET "vfat2_sbits_n_i<2>"    LOC = P14;
+
+NET "vfat2_sbits_p_i<3>"    LOC = P12;
+NET "vfat2_sbits_n_i<3>"    LOC = P11;
+
+NET "vfat2_sbits_p_i<4>"    LOC = P10;
+NET "vfat2_sbits_n_i<4>"    LOC = P9;
+
+NET "vfat2_sbits_p_i<5>"    LOC = P8;
+NET "vfat2_sbits_n_i<5>"    LOC = P7;
+
+NET "vfat2_sbits_p_i<6>"    LOC = P6;
+NET "vfat2_sbits_n_i<6>"    LOC = P5;
+
+NET "vfat2_sbits_p_i<7>"    LOC = P2;
+NET "vfat2_sbits_n_i<7>"    LOC = P1;
+
+NET "vfat2_data_out_p_i"    LOC = P142;
+NET "vfat2_data_out_n_i"    LOC = P141;
+
+NET "vfat2_data_valid_p_i"  LOC = P140;
+NET "vfat2_data_valid_n_i"  LOC = P139;
+
+NET "vfat2_t1_p_i"          LOC = P138;
+NET "vfat2_t1_n_i"          LOC = P137;
+
+NET "vfat2_mclk_p_i"        LOC = P134;
+NET "vfat2_mclk_n_i"        LOC = P133;
+
+NET "vfat2_rehb_i"          LOC = P132;
+NET "vfat2_resb_i"          LOC = P131;
+
+NET "vfat2_sda_i"           LOC = P127;
+NET "vfat2_scl_i"           LOC = P126;
+
+NET "vfat2_chipaddr_i<0>"   LOC = P124;
+NET "vfat2_chipaddr_i<1>"   LOC = P123;
+NET "vfat2_chipaddr_i<2>"   LOC = P121;
+
+NET "usb_miso_i"            LOC = P67;
+NET "usb_mosi_o"            LOC = P59;
+NET "usb_miosi_o<0>"       LOC = P62;
+NET "usb_miosi_o<1>"       LOC = P61;
+NET "usb_miosi_o<2>"       LOC = P66;
+NET "usb_csb_o"             LOC = P58;
+NET "usb_sclk_o"            LOC = P57;
+
+#NET "mcu_data_io<0>"    LOC = P88;
+#NET "mcu_data_io<1>"    LOC = P87;
+#NET "mcu_data_io<2>"    LOC = P85;
+#NET "mcu_data_io<3>"    LOC = P84;
+
+#NET "mcu_csb_i"         LOC = P83;
+#NET "mcu_mosi_i"        LOC = P82;
+#NET "mcu_miso_o"        LOC = P81;
+#NET "mcu_sclk_i"        LOC = P80;
+
+#NET "mcu_tx_o<0>"        LOC = P79;
+#NET "mcu_rx_o<0>"        LOC = P78;
+
+#NET "mcu_tx_o<1>"        LOC = P74;
+#NET "mcu_rx_o<1>"        LOC = P75;

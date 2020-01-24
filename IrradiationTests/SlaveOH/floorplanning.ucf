@@ -1,0 +1,64 @@
+INST "bram_inst/bram_loop[0].bram_slice_inst" AREA_GROUP = "slice_0";
+INST "dsp_inst/dsp_loop[0].dsp_slice_inst" AREA_GROUP = "slice_0";
+INST "clb_inst/clb_loop[0].clb_slice_inst" AREA_GROUP = "slice_0";
+AREA_GROUP "slice_0" RANGE=CLOCKREGION_X0Y4:CLOCKREGION_X0Y4;
+
+INST "bram_inst/bram_loop[1].bram_slice_inst" AREA_GROUP = "slice_1";
+INST "dsp_inst/dsp_loop[1].dsp_slice_inst" AREA_GROUP = "slice_1";
+INST "clb_inst/clb_loop[1].clb_slice_inst" AREA_GROUP = "slice_1";
+AREA_GROUP "slice_1" RANGE=SLICE_X56Y160:SLICE_X103Y199;
+AREA_GROUP "slice_1" RANGE=DSP48_X3Y64:DSP48_X5Y79;
+AREA_GROUP "slice_1" RANGE=RAMB18_X3Y64:RAMB18_X5Y79;
+AREA_GROUP "slice_1" RANGE=RAMB36_X3Y32:RAMB36_X5Y39;
+
+INST "bram_inst/bram_loop[2].bram_slice_inst" AREA_GROUP = "slice_2";
+INST "dsp_inst/dsp_loop[2].dsp_slice_inst" AREA_GROUP = "slice_2";
+INST "clb_inst/clb_loop[2].clb_slice_inst" AREA_GROUP = "slice_2";
+AREA_GROUP "slice_2" RANGE=CLOCKREGION_X0Y3:CLOCKREGION_X0Y3;
+
+INST "bram_inst/bram_loop[3].bram_slice_inst" AREA_GROUP = "slice_3";
+INST "dsp_inst/dsp_loop[3].dsp_slice_inst" AREA_GROUP = "slice_3";
+INST "clb_inst/clb_loop[3].clb_slice_inst" AREA_GROUP = "slice_3";
+AREA_GROUP "slice_3" RANGE=SLICE_X56Y120:SLICE_X103Y159;
+AREA_GROUP "slice_3" RANGE=DSP48_X3Y48:DSP48_X5Y63;
+AREA_GROUP "slice_3" RANGE=RAMB18_X3Y48:RAMB18_X5Y63;
+AREA_GROUP "slice_3" RANGE=RAMB36_X3Y24:RAMB36_X5Y31;
+
+INST "bram_inst/bram_loop[4].bram_slice_inst" AREA_GROUP = "slice_4";
+INST "dsp_inst/dsp_loop[4].dsp_slice_inst" AREA_GROUP = "slice_4";
+INST "clb_inst/clb_loop[4].clb_slice_inst" AREA_GROUP = "slice_4";
+AREA_GROUP "slice_4" RANGE=CLOCKREGION_X0Y2:CLOCKREGION_X0Y2;
+
+INST "bram_inst/bram_loop[5].bram_slice_inst" AREA_GROUP = "slice_5";
+INST "dsp_inst/dsp_loop[5].dsp_slice_inst" AREA_GROUP = "slice_5";
+INST "clb_inst/clb_loop[5].clb_slice_inst" AREA_GROUP = "slice_5";
+AREA_GROUP "slice_5" RANGE=SLICE_X56Y80:SLICE_X103Y119;
+AREA_GROUP "slice_5" RANGE=DSP48_X3Y32:DSP48_X5Y47;
+AREA_GROUP "slice_5" RANGE=RAMB18_X3Y32:RAMB18_X5Y47;
+AREA_GROUP "slice_5" RANGE=RAMB36_X3Y16:RAMB36_X5Y23;
+
+INST "bram_inst/bram_loop[6].bram_slice_inst" AREA_GROUP = "slice_6";
+INST "dsp_inst/dsp_loop[6].dsp_slice_inst" AREA_GROUP = "slice_6";
+INST "clb_inst/clb_loop[6].clb_slice_inst" AREA_GROUP = "slice_6";
+AREA_GROUP "slice_6" RANGE=CLOCKREGION_X0Y1:CLOCKREGION_X0Y1;
+
+INST "bram_inst/bram_loop[7].bram_slice_inst" AREA_GROUP = "slice_7";
+INST "dsp_inst/dsp_loop[7].dsp_slice_inst" AREA_GROUP = "slice_7";
+INST "clb_inst/clb_loop[7].clb_slice_inst" AREA_GROUP = "slice_7";
+AREA_GROUP "slice_7" RANGE=SLICE_X56Y40:SLICE_X103Y79;
+AREA_GROUP "slice_7" RANGE=DSP48_X3Y16:DSP48_X5Y31;
+AREA_GROUP "slice_7" RANGE=RAMB18_X3Y16:RAMB18_X5Y31;
+AREA_GROUP "slice_7" RANGE=RAMB36_X3Y8:RAMB36_X5Y15;
+
+INST "bram_inst/bram_loop[8].bram_slice_inst" AREA_GROUP = "slice_8";
+INST "dsp_inst/dsp_loop[8].dsp_slice_inst" AREA_GROUP = "slice_8";
+INST "clb_inst/clb_loop[8].clb_slice_inst" AREA_GROUP = "slice_8";
+AREA_GROUP "slice_8" RANGE=CLOCKREGION_X0Y0:CLOCKREGION_X0Y0;
+
+INST "bram_inst/bram_loop[9].bram_slice_inst" AREA_GROUP = "slice_9";
+INST "dsp_inst/dsp_loop[9].dsp_slice_inst" AREA_GROUP = "slice_9";
+INST "clb_inst/clb_loop[9].clb_slice_inst" AREA_GROUP = "slice_9";
+AREA_GROUP "slice_9" RANGE=SLICE_X56Y0:SLICE_X103Y39;
+AREA_GROUP "slice_9" RANGE=DSP48_X3Y0:DSP48_X5Y15;
+AREA_GROUP "slice_9" RANGE=RAMB18_X3Y0:RAMB18_X5Y15;
+AREA_GROUP "slice_9" RANGE=RAMB36_X3Y0:RAMB36_X5Y7;

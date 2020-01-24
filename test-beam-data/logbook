@@ -1,0 +1,315 @@
+When multiple files are written on a same line, they have to be combinend to get the full data (for example scans that can be put together to reach the full range)
+
+
+
+--------------------------------------------
+Wednesday 3rd of December, entries by Thomas
+--------------------------------------------
+
+
+Threshold scan 2014_12_03_08_46_41.txt is a very nice preliminary scan obtained after Andrey improved the grounding
+
+
+
+
+--------------------------------------------
+Thursday 4th of  December, entries by Thomas
+--------------------------------------------
+
+
+General comment about this data taking session: runs that are not referenced here are not interesting. Comments found here can be interesting to analyze the data. The data bellow has been taken with pions.
+
+
+Threshold scans 2014_12_04_18_04_35.txt, 2014_12_04_18_19_53.txt, 2014_12_04_18_36_32.txt, 2014_12_04_19_02_05.txt are for the same HV and should be merged : current suplied 798
+- Brian tells me that noise is increased due to high rate. They will increase their threshold.
+- Once this threshold scan is over, I will increase the threshold and do a latency scan. 
+- After fast analysis: data is not clean, probably due to noise (used scripts in test-beam-analysis to render a plot)
+
+Latency scan 2014_12_04_19_22_56.txt is for HV and 5000 events: current supplied 798 
+- Missed the peak with this narrow latency scan
+
+Latency scan 2014_12_04_19_33_01.txt is the same as the one above, but the peak is not visible on the scan
+- Brians says this is due to the fact that we are in sync mode and thus have a greater latency. 
+- HV is being changed so no peak at this point, but will have one for the next HV
+
+
+Latency scan 2014_12_04_19_54_12.txt is for an HV of : current 727 uA
+- Brian explains that they start from highest HV and go to lowest to then scan to highest in order to dissipate any charge distribution on the foils. A charge distribution would reduce the efficiency. By going to lower HV the distribution is allowed to dissipate and thus we can recover the gain. (This is needed if the relaxation time is long for the charge distribution). Otherwise it is not needed. Proposed by Luigi, see with him for more details.
+- Efficiency is very low but this is expetect. Future HVs will be {798,788,778,767,757,747,727} starting from the end (727 is already done).
+
+
+Latency scan 2014_12_04_20_26_44.txt is for an HV of : current 747 uA
+- Efficiency should be better
+- Will try to do a threshold scan too
+- Scan happend during a no beam period, so reran a second scan with 5000 events
+
+Latency scan 2014_12_04_21_03_02.txt is the second fast scan for HV : current 747 uA
+- Run was interrupted by HV change
+
+
+Latency scan 2014_12_04_21_09_48.txt is for HV : current 757 uA
+
+
+Latency scan 2014_12_04_21_27_12.txt is for HV : current 767 uA 
+
+Latency scan 2014_12_04_21_51_55.txt is for same HV as above but is an independant run : current 767 uA
+
+
+Latency scan 2014_12_04_22_20_21.txt is for HV : current 787 uA
+- Looks ugly
+
+
+Summary:
+- 727 : 2014_12_04_19_54_12.txt
+- 747 : ugly
+- 757 : 2014_12_04_21_09_48.txt
+- 767 : 2014_12_04_21_27_12.txt or 2014_12_04_21_51_55.txt
+
+
+
+
+----------------------------------------
+Friday 5th of December entries by Thomas
+----------------------------------------
+
+
+Latency scan 2014_12_05_10_26_59.txt is really nice : for HV 788 uA
+- Muon run
+
+Tracking data in run 2014_12_05_11_24_41.txt is really nice too : for HV 788 uA
+- Muon run
+- Thresnold at 30
+
+We stop the data taking now and do some TDC runs (apparently the acquisition puts noise on the SBits). Will resume data taking in ~1h.
+
+Tracking data in run 2014_12_05_12_25_12.txt is for muons
+- Looks nice
+- Threshold at 30
+
+List of tracking data samples:
+- 2014_12_05_10_16_55.txt 
+- 2014_12_05_11_24_41.txt
+- 2014_12_05_12_25_12.txt
+- 2014_12_05_12_43_09.txt
+- 2014_12_05_12_59_51.txt
+- 2014_12_05_13_23_17.txt
+- Threshold of above data is 30 
+
+
+Beam will be stopped at 14h. I asked Jianmeng to do a Threshold scan after that (which is what we are missing today). 
+
+Threshold scan 2014_12_05_13_04_45.txt is for HV : current 788 uA 
+
+
+
+We will now change the threshold and take data
+
+Tracking data in run 2014_12_05_14_27_36.txt is for a threshold of 20
+- We see more noise, but the beam profile is still there
+- We will take 10 000 events and then move to a threshold of 40 to see if we can clear out more noise and maybe get a cleaner beam profile
+- Maybe tomorrow we can figure out dead or noisy channels and mask them
+
+Tracking data in run 2014_12_05_14_44_08.txt is for a threshold of 40
+
+
+
+We are now starting a scan for different HVs. For each HV we do a latency and threshodl scan. 
+
+Here is how we are going to proceed : TOTEM is doing three runs with different delays per HV value
+- The first run will be a latency scan
+- The second run will be a data taking
+- The third run will be a threshold scan
+- HV vaues will be 778, 768, 758, 748 
+
+
+Latency scan 2014_12_05_16_20_27.txt is for a threshold of 30 and a HV of 778 uA
+
+Threshold scan 2014_12_05_16_41_51.txt is for an HV of 778 uA with 1000 events
+
+Threshold scan 2014_12_05_16_44_42.txt is for an HV of 778 uA with 5000 events
+
+Tracking data in run 2014_12_05_16_57_01.txt is for HV of 778 uA and threshold a 15 (not so many events, as 15 is not optimal)
+
+Tracking data in run 2014_12_05_16_59_13.txt is for HV of 778 uA and threshold a 30 (good run in the sense that there are many events)
+
+
+Going off plans a minute, switching to HV 798 and doing a latency scan, then resuming everyting as planned
+
+Latency scan 2014_12_05_17_32_05.txt txt is for a threshold of 30 and a HV of 798 uA
+
+Threshold scan 2014_12_05_17_37_31.txt is for HV of 798 uA
+
+Tracking data run 2014_12_05_17_52_53.txt is for a threshold of 30 and a HV of 798 uA
+- The latency must not be optimal as the efficiency is not good.
+
+Latency scan 2014_12_05_18_09_07.txt is for a threshold of 30 and a HV of 798 uA
+- Second scan at this HV to find a better latency position. Left the monostable to a width of 4
+- Found peak so starting a data acquisition
+
+Tracking data run 2014_12_05_18_15_16.txt is for a threshold of 30 and a HV of 798 uA
+- Already seeing better results than before
+- Actually seeing GREAT results -> When doing a latency scan, leave monostable width to 4 so that we can shoot in the middle of the plateau and be more efficient !!!
+
+
+Latency scan 2014_12_05_18_27_18.txt is for a threshold of 30 and a HV of 767 uA
+- Will do a latency scan with 4 clock cycles monostable if time
+
+Tracking data run 2014_12_05_18_42_17.txt is for a threshold of 30 and a HV of 767 uA
+- Stopping acquisition to do a threshold scan and also almost no beam so not worth waisting time
+
+Threshold scan 2014_12_05_18_58_41.txt and 2014_12_05_19_05_34.txt are for a threshold of 30 and a HV of 767 uA
+
+Latency scan 2014_12_05_19_14_18.txt is for a threshold of 30 and a HV of 767 uA with 1000 events
+
+Latency scan 2014_12_05_19_17_56.txt, 2014_12_05_19_53_36.txt, and 2014_12_05_20_11_52.txt are for a threshold of 30 and a HV of 767 uA with 10000 events
+
+
+HV is back at 798 uA so tacking tracking data
+
+Tracking data run 2014_12_05_20_25_23.txt is for a threshold of 30 and a HV of 798 uA
+
+
+HV scan resumed now going to 758 uA
+
+Latency scan 2014_12_05_20_41_44.txt is for a threshold of 30 and a HV of 758 uA
+- Set 4 clock cycles to find the plateau and take tracking data
+
+Threshold scan 2014_12_05_21_15_04.txt is for a HV of 758 uA
+
+Tracking data run 2014_12_05_21_18_16.txt is for a threshold of 30, a latency of 18 and a HV of 758 uA
+
+
+HV of 748 uA skipped due to switch to pion beam
+
+
+
+
+--------------------------------------------
+Saturday 4th of December, entries by Thomas
+--------------------------------------------
+
+
+Tracking data run 2014_12_05_22_06_13.txt has been running all night at a threshold of 15
+- No problems with the system apparently (GREAT!)
+- It seems the clocks has been resetted at some point in the night, but scripts put the values back to default (improve this script cause it is great!)
+- Data set is a mix of pions and muons
+- Will take a data sample at threshold of 30 tonight, which will be much better!
+
+Latency scan 2014_12_06_13_05_19.txt is for a threshold of 30
+- With 4 clock cycles
+
+Latnecy scan 2014_12_06_13_35_51.txt is for a threshold of 30
+- With 1 clock cycle
+
+Threshold scan 2014_12_06_14_11_45.txt
+
+Tracking data run 2014_12_06_16_59_28.txt is for a threshold of 30
+
+Tracking data run 2014_12_06_19_42_09.txt is for a threshold of 40
+
+
+
+
+-----------------------------------------
+Sunday 7th of December, entries by Thomas
+-----------------------------------------
+
+
+Tracking data run 2014_12_06_21_39_08.txt is for a threshold of 30
+- Ran all night
+- Latecy changed during past run, so possibly a lot of 0 events
+
+Tracking data run 2014_12_07_09_05_42.txt is for a threshold of 40
+- I think doing a day-long data acquisition at a threshold of 40 will clean out the results (even less noise)
+- Preliminary data shows a really nice beam profile with a lot less noise than at 30 (espcially certain strips)
+- I will stop the current run and start a new one that is identical, just to be safe and split the data
+
+Tracking data run 2014_12_07_10_29_52.txt is for a threshold of 40
+- This run is identical to the one above, they can be combined
+
+Latency scan 2014_12_07_12_53_02.txt is for a threshold of 30
+
+// entries by GDL
+
+Took some runs with muons between 4PM and 7:20PM
+Usually latency set to 12, for Asynch mode. And set to 21 for Synch mode (4PM)
+I was 788 all the time
+
+Trip on our detector around 8PM
+
+Runs 228 (7:42PM), 229, 230, 231 (9:30 PM) taken with pions
+9:27 PM: Monitor_system: 116 Resyncs, many GLIB errors -> Reset counters
+
+9:40 PM : Latency scan 7-16 500 events/point -> 12
+
+9:48 PM: Monitor_system: 10 Resyncs, 0 GLIB errors
+
+10:05 PM: start RUN 232, settings as before this afternoon: latency = 12, Threshold = 30. 
+From Brian: are taking a long run with optimized setting on GE1/1 v4. Run started at 9:23 PM. 
+GDL: I am not changing the settings of our detector to have the whole TDC run with the same parameters.
+10:33 PM: stopped RUN 232 with 21k events (nice beam profile)
+
+10:34 PM: start RUN 233, same settings
+
+-----------------------------------------
+Monday 8th of December
+-----------------------------------------
+
+1:15 AM: stopped RUN 233, with > 100 k events
+Reset counters (many errors on GLIB), but I think data are fine (at least the settings were still the same as start time)
+
+1:17 : Latenct scan 9-16, 500 evts/pt, peak at 12-13 -> kept 12
+
+1:19 AM: start RUN 234 with same settings as 233
+
+6:00 AM: run ended with 207340 events.
+Pion run except the last 30 min.
+
+No beam until Wednesday afternoon
+
+7:15 Threshold scan
+
+10:00 AM: start to make threshold scans for different IComp values
+
+1:00 PM: finished threshold scnas for different IComp values. Some strange
+drop is seen for lower IComp values and tends to vanish for IComp values
+above 80.
+
+2:00 PM: reruning threshold scans with more events (5000 events)
+
+5:00 PM: now analysing the more precise and targetted files. same peak is seen.
+
+-----------------------------------------
+Tuesday 9th of December
+-----------------------------------------
+
+10:00 AM: preparing to make some DAC scans. Saving the sum(x^2) to the txt file in order to compute variances.
+
+-----------------------------------------
+Thursday 11th of December
+----------------------------------------
+11:00 AM: running some threshold and latency scan 
+11:30 AM: runing threshold scan with different icomp
+12:00 : running latency scan
+12:30 : run but low efficiency
+13:20 : run 236 at 747 uA 
+16:30 : run 237 with muons at 757 uA
+17:00 : run 238 with muons at 757 uA
+
+----------------------------------------
+Friday 12th of December
+----------------------------------------
+11:05 : taking some threshold and latency scan to prepare some runs
+11:20 : run 239 with muons at 800uA
+
+----------------------------------------
+Saturday 13th of December
+----------------------------------------
+09:45: run240
+09:46 run241
+10:06 run 242
+10:42 run 243
+13:20 run 244
+14:20 run 245
+15:00 run 246
+18:35 run 248 no errors since couple of hours ! impresive :)

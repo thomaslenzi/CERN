@@ -1,0 +1,13 @@
+NET "qpll_reset_o" LOC = J9;
+NET "qpll_locked_i" LOC = L9;
+NET "qpll_clk_p_i" LOC = L10;
+NET "qpll_clk_n_i" LOC = M10;
+
+NET "hdmi[0]" LOC = AC12;
+NET "hdmi[1]" LOC = AC13;
+NET "hdmi[2]" LOC = AD12;
+NET "hdmi[3]" LOC = AD11;
+NET "hdmi[4]" LOC = AF11;
+NET "hdmi[5]" LOC = AE11;
+NET "hdmi[6]" LOC = AF15;
+NET "hdmi[7]" LOC = AD15;

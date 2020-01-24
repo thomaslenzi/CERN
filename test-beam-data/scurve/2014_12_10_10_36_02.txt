@@ -1,0 +1,26 @@
+Time	2014/12/10 10:36:02
+Started a SCurve of VFAT2 #12 from 0 to 255 with 100 events and threshold 30
+--- VFAT2 #12 configuration ---
+latency	10
+ipreampfeed	80
+chipid1	240
+hitcount1	0
+hitcount0	3
+vcal	255
+icomp	75
+chipid0	235
+ishaper	150
+vthreshold2	0
+ishaperfeed	100
+ipreampin	168
+vthreshold1	30
+ipreampout	150
+calphase	127
+upsetreg	255
+hitcount2	0
+ctrl0	119
+ctrl1	0
+ctrl2	112
+ctrl3	0
+--- Data points ---
+0	0.03

@@ -1,0 +1,46 @@
+Time	2014/12/04 17:26:21
+Started a threshold scan on VFAT2 #12 from 0 to 50 with 10000 events
+--- VFAT2 #12 configuration ---
+latency	13
+ipreampfeed	80
+chipid1	240
+hitcount1	0
+hitcount0	47
+vcal	0
+icomp	75
+chipid0	235
+ishaper	150
+vthreshold2	0
+ishaperfeed	100
+ipreampin	168
+vthreshold1	15
+ipreampout	150
+calphase	0
+upsetreg	0
+hitcount2	0
+ctrl0	55
+ctrl1	0
+ctrl2	48
+ctrl3	0
+--- Data points ---
+0	0.9572
+1	0.9735
+2	0.9863
+3	0.9889
+4	0.9861
+5	0.9762
+6	0.9765
+7	0.9696
+8	0.9836
+9	0.9715
+10	0.7989
+11	0.6507
+12	0.7915
+13	0.8575
+14	0.7951
+15	0.6637
+16	0.4195
+17	0.3208
+18	0.2704
+19	0.228
+20	0.1919

@@ -1,0 +1,95 @@
+#-------------------------------------------------------------------------------------
+# jtag interface constraints 
+#-------------------------------------------------------------------------------------
+####net "ibert_inst/chipscope_icon_inst/u0/ibert_inst/chipscope_icon_inst/idrck" tnm_net = j_clk ;
+#net "ibert_inst/chipscope_icon_inst/u0/iupdate_out" tnm_net = u_clk ;
+net "ibert_inst/chipscope_icon_inst/u0/ishift_out" tig ;
+##timespec ts_j_clk = period j_clk 30 ns ;
+#timespec ts_u_to_j = from u_clk to j_clk 15 ns ;
+timespec ts_u_to_u = from u_clk to u_clk 15 ns ;
+timespec ts_u_to_d = from u_clk to d_clk tig ;
+timespec ts_j_to_d = from j_clk to d_clk tig ;
+timespec ts_d_to_j = from d_clk to j_clk tig ;
+net "ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/ma_dclk" tnm_net = d_clk ;
+
+#-------------------------------------------------------------------------------------
+# gt clock constraints 
+#-------------------------------------------------------------------------------------
+# input refclk constratins
+
+
+net "q4_clk1_mgtrefclk_p_ipad" tnm_net = "tnm_gt_quad_clk_4_1";
+timespec "ts_gt_quad_clk_4_1" = period "tnm_gt_quad_clk_4_1" 6.25 ns;
+
+# gt pll output constraints
+# gt x0y12
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y12/gt_txoutclk tnm_net = "tnm_x0y12_txoutclk";
+timespec "ts_x0y12_txoutclk" = period "tnm_x0y12_txoutclk" 6.25 ns;
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y12/gt_rxrecclk tnm_net = "tnm_x0y12_rxrecclk";
+timespec "ts_x0y12_rxrecclk" = period "tnm_x0y12_rxrecclk" 6.25 ns;
+# gt x0y13
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y13/gt_txoutclk tnm_net = "tnm_x0y13_txoutclk";
+timespec "ts_x0y13_txoutclk" = period "tnm_x0y13_txoutclk" 6.25 ns;
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y13/gt_rxrecclk tnm_net = "tnm_x0y13_rxrecclk";
+timespec "ts_x0y13_rxrecclk" = period "tnm_x0y13_rxrecclk" 6.25 ns;
+# gt x0y14
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y14/gt_txoutclk tnm_net = "tnm_x0y14_txoutclk";
+timespec "ts_x0y14_txoutclk" = period "tnm_x0y14_txoutclk" 6.25 ns;
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y14/gt_rxrecclk tnm_net = "tnm_x0y14_rxrecclk";
+timespec "ts_x0y14_rxrecclk" = period "tnm_x0y14_rxrecclk" 6.25 ns;
+# gt x0y15
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y15/gt_txoutclk tnm_net = "tnm_x0y15_txoutclk";
+timespec "ts_x0y15_txoutclk" = period "tnm_x0y15_txoutclk" 6.25 ns;
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y15/gt_rxrecclk tnm_net = "tnm_x0y15_rxrecclk";
+timespec "ts_x0y15_rxrecclk" = period "tnm_x0y15_rxrecclk" 6.25 ns;
+# gt x0y16
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y16/gt_txoutclk tnm_net = "tnm_x0y16_txoutclk";
+timespec "ts_x0y16_txoutclk" = period "tnm_x0y16_txoutclk" 6.25 ns;
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y16/gt_rxrecclk tnm_net = "tnm_x0y16_rxrecclk";
+timespec "ts_x0y16_rxrecclk" = period "tnm_x0y16_rxrecclk" 6.25 ns;
+# gt x0y17
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y17/gt_txoutclk tnm_net = "tnm_x0y17_txoutclk";
+timespec "ts_x0y17_txoutclk" = period "tnm_x0y17_txoutclk" 6.25 ns;
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y17/gt_rxrecclk tnm_net = "tnm_x0y17_rxrecclk";
+timespec "ts_x0y17_rxrecclk" = period "tnm_x0y17_rxrecclk" 6.25 ns;
+# gt x0y18
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y18/gt_txoutclk tnm_net = "tnm_x0y18_txoutclk";
+timespec "ts_x0y18_txoutclk" = period "tnm_x0y18_txoutclk" 6.25 ns;
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y18/gt_rxrecclk tnm_net = "tnm_x0y18_rxrecclk";
+timespec "ts_x0y18_rxrecclk" = period "tnm_x0y18_rxrecclk" 6.25 ns;
+# gt x0y19
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y19/gt_txoutclk tnm_net = "tnm_x0y19_txoutclk";
+timespec "ts_x0y19_txoutclk" = period "tnm_x0y19_txoutclk" 6.25 ns;
+net ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y19/gt_rxrecclk tnm_net = "tnm_x0y19_rxrecclk";
+timespec "ts_x0y19_rxrecclk" = period "tnm_x0y19_rxrecclk" 6.25 ns;
+
+#-------------------------------------------------------------------------------------
+# system clock timing constraints and pin locs (if applicable) 
+#-------------------------------------------------------------------------------------
+# system clock sourced by x0y16
+net "ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/ma_dclk" tnm_net = "tnm_ma_dclk";
+timespec "ts_ma_dclk" = period "tnm_ma_dclk" 10 ns;
+timespec ts_madclk_to_gt = from tnm_ma_dclk to tnm_x0y16_txoutclk tig;
+timespec ts_gt_to_madclk = from tnm_x0y16_txoutclk to tnm_ma_dclk tig;
+
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_ma_dclk_divider/mmcm_adv_inst clkfbout_mult_f  = 25.000;
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_ma_dclk_divider/mmcm_adv_inst divclk_divide    = 4;
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_ma_dclk_divider/mmcm_adv_inst clkout0_divide_f = 10.000;
+#-------------------------------------------------------------------------------------
+# gt loc constraint 
+#-------------------------------------------------------------------------------------
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y12/u_gt/gtxe1_i loc=gtxe1_x0y12;
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y13/u_gt/gtxe1_i loc=gtxe1_x0y13;
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y14/u_gt/gtxe1_i loc=gtxe1_x0y14;
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y15/u_gt/gtxe1_i loc=gtxe1_x0y15;
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y16/u_gt/gtxe1_i loc=gtxe1_x0y16;
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y17/u_gt/gtxe1_i loc=gtxe1_x0y17;
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y18/u_gt/gtxe1_i loc=gtxe1_x0y18;
+inst ibert_inst/chipscope_ibert_inst/u0/u_ibert_core/u_gtcpx_x0y19/u_gt/gtxe1_i loc=gtxe1_x0y19;
+
+#-------------------------------------------------------------------------------------
+# gt refclk pin locs 
+#-------------------------------------------------------------------------------------
+# refclk q4-refclk1 sources gt(s) x0y19 x0y18 x0y17 x0y16 x0y15 x0y14 x0y13 x0y12
+net q4_clk1_mgtrefclk_n_ipad loc=f5;
+net q4_clk1_mgtrefclk_p_ipad loc=f6;

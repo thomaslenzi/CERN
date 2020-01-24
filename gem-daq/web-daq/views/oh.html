@@ -1,0 +1,234 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+{% raw %}
+
+<div>
+    <h1>OptoHybrid monitoring and control</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Help</h3>
+                </div>
+                <div class="panel-body">
+                    <p>The ORANGE warnings on this page are not critical and do not prevent the system from running. They can be ignored. However, do not reset the counters unless the system has been restarted. This information will help the developers to stabilize the system.</p>
+                    <p>The RED warnings indicate that the values read from or written in the system are not the optimal values for data taking. In case you plan on performing a data taking run, all RED warnings should be resolved before the start of the run.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <!-- System registers -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">System registers</h3>
+                </div>
+                <div class="panel-body">
+                  <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Reference clock</label>
+                                <select class="form-control" ng-model="clkSource" ng-options="item.name for item in clkSourceChoices track by item.id"></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Trigger source</label>
+                                <select class="form-control" ng-model="t1Source" ng-options="item.name for item in t1SourceChoices track by item.id"></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Loopback trigger source</label>
+                                <input type="text" maxlength="2" min="0" max="23" class="form-control" ng-model="loopbackSource">
+                            </div>
+                            <div class="form-group">
+                                <label>Trigger Throttling</label>
+                                <input type="number" class="form-control" ng-model="triggerThrottling">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label>TDC SBit mode</label>
+                                    <select class="form-control" ng-model="sbitMode" ng-options="item.name for item in sbitModeChoices track by item.id"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>TDC SBit outputs</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Output 0: </div>
+                                        <input type="number" min="0" max="23" class="form-control" ng-model="sbitSelect[0]" ng-disabled="sbitMode.id >= 2">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Output 1: </div>
+                                        <input type="number" min="0" max="23" class="form-control" ng-model="sbitSelect[1]" ng-disabled="sbitMode.id >= 2">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Output 2: </div>
+                                        <input type="number" min="0" max="23" class="form-control" ng-model="sbitSelect[2]" ng-disabled="sbitMode.id >= 2">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Output 3: </div>
+                                        <input type="number" min="0" max="23" class="form-control" ng-model="sbitSelect[3]" ng-disabled="sbitMode.id >= 2">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Output 4: </div>
+                                        <input type="number" min="0" max="23" class="form-control" ng-model="sbitSelect[4]" ng-disabled="sbitMode.id >= 2">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Output 5: </div>
+                                        <input type="number" min="0" max="23" class="form-control" ng-model="sbitSelect[5]" ng-disabled="sbitMode.id >= 2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label>VFAT2 tracking mask</label>
+                              <div class="input-group">
+                                  <div class="input-group-addon">0x</div>
+                                  <input type="text" maxlength="6" class="form-control" ng-model="vfat2sMask">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>VFAT2 trigger mask</label>
+                              <div class="input-group">
+                                  <div class="input-group-addon">0x</div>
+                                  <input type="text" maxlength="6" class="form-control" ng-model="sbitsMask">
+                              </div>
+                          </div>
+                            <div class="form-group">
+                                <label>VFAT2 Zero Suppress</label>
+                                &nbsp; &nbsp; <input type="checkbox" ng-model="zeroSuppress">
+                            </div>
+                            <div class="form-group">
+                                <label>VFAT2 CRC Suppress</label>
+                                &nbsp; &nbsp; <input type="checkbox" ng-model="crcSuppress">
+                            </div>
+                            <div class="form-group">
+                                <label></label>
+                                <a class="btn btn-success btn-xs" ng-click="set_system_regs()">Apply changes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-4">
+            <!-- Status regs -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Status registers</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Register</th>
+                                <th>Date/Locked</th>
+                                <th>Version/Lock Counter</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="reg in statRegs" ng-class="{ danger: reg.data == 0 }">
+                                <td>{{ reg.name }}</td>
+                                <td>{{ reg.data.val1 }}</td>
+                                <td>{{ reg.data.val2 }}</td>
+                                <!-- <td>{{ reg.data | hex }}</td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <p><a class="btn btn-primary btn-xs btn-block" ng-click="reset_qpll_counters()">Reset the QPLL counters</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Wishbone counters -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Wishbone counters</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Wishbone module</th>
+                                <th>Strobes</th>
+                                <th>Acknowledgments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="counter in wbCounters" ng-class="{ warning: counter.stb != counter.ack }">
+                                <td>{{ counter.name }}</td>
+                                <td>{{ counter.stb | hex }}</td>
+                                <td>{{ counter.ack | hex }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <p><a class="btn btn-primary btn-xs btn-block" ng-click="reset_wb_counters()">Reset the counters</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- T1 counters -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">T1 commands counters</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Command</th>
+                                <th>Counter</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="counter in t1Counters">
+                                <td>{{ counter.name }}</td>
+                                <td>{{ counter.cnt | hex }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <p><a class="btn btn-primary btn-xs btn-block" ng-click="reset_t1_counters()">Reset the counters</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- GTX counters -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">GBT and GTX error counters</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Command</th>
+                                <th>Counter</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="counter in gtxCounters">
+                                <td>{{ counter.name }}</td>
+                                <td>{{ counter.cnt | hex }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <p><a class="btn btn-primary btn-xs btn-block" ng-click="reset_gtx_counters()">Reset the counters</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endraw %}
+
+{% endblock %}

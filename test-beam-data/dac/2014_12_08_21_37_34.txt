@@ -1,0 +1,35 @@
+Time	2014/12/08 21:37:34
+Started a DAC scan on DAC #1 of VFAT2 #12 from 0 to 10 with 1 events
+--- VFAT2 #12 configuration ---
+latency	0
+ipreampfeed	0
+chipid1	240
+hitcount1	0
+hitcount0	0
+vcal	0
+icomp	0
+chipid0	235
+ishaper	0
+vthreshold2	0
+ishaperfeed	0
+ipreampin	3
+vthreshold1	0
+ipreampout	0
+calphase	0
+upsetreg	255
+hitcount2	0
+ctrl0	1
+ctrl1	1
+ctrl2	0
+ctrl3	0
+--- Data points ---
+0	1.0
+1	2.0
+2	4.0
+3	6.0
+4	7.0
+5	9.0
+6	11.0
+7	13.0
+8	15.0
+9	16.0

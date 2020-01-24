@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-cloak>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>GEM Web DAQ interface</title>
+        <link rel="stylesheet" href="http://bootswatch.com/lumen/bootstrap.css">
+        <link rel="stylesheet" href="/stylesheets/notify.css">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="col-sm-2" ng-controller="commonCtrl" id="menu">
+                 <h2 class="text-center"><span class="glyphicon glyphicon-fire text-warning"></span> GEM DAQ</h2>
+                {% raw %}
+                    <hr>
+                    <a class="btn btn-block btn-xs btn-primary navbar-toggle collapsed" data-toggle="collapse" data-target="#collapseExample">
+                        Menu
+                    </a>
+
+                    <ul class="nav nav-pills nav-stacked navbar-collapse collapse" id="collapseExample">
+                        <li ng-class=""><a href="/">Home</a></li>
+                        <li><a href="/glib">GLIB Dashboard</a></li>
+                        <li><a href="/oh">OptoHybrid Dashboard</a></li>
+                        <li><a href="/vfat2">VFAT2s Dashboard</a></li>
+                        <li><hr></li>
+                        <li><a href="/adc">OptoHybrid ADC</a></li>
+                        <li><a href="/t1">OptoHybrid T1 controller</a></li>
+                        <li><a href="/i2c">VFAT2s I2C</a></li>
+                        <li><a href="/scan">VFAT2s Scans</a></li>
+                        <li><a href="/ultra">VFAT2s Ultra Scans</a></li>
+                        <li><a href="/rates">VFAT2s Rates</a></li>
+                        <li><a href="/tkdata">Tracking Data</a></li>
+                    </ul>
+                {% endraw %}
+                <div class="col-xs-offset-1">
+                    <span class="label label-default">GEM Chamber Selection</span>
+                    <div class="radio"><label><input type="radio" name="ohSelect" id="ohSelect" value="0" checked="" ng-model="OHID" ng-value="0" ng-change="oh_change()"> GEM <b>#0</b></label></div>
+                    <div class="radio"><label><input type="radio" name="ohSelect" id="ohSelect" value="1" ng-model="OHID" ng-value="1" ng-change="oh_change()"> GEM <b>#1</b></label></div>
+                    <div class="checkbox"><label><input type="checkbox" ng-model="blockIPBus" ng-change="ipbus_block()"> Block IPBus requests</label></div>
+                </div>
+                <a href="#" class="btn btn-block btn-link" id="totop">Back to the top</a>
+            </div>
+            <div class="col-sm-10 col-sm-offset-2" ng-controller="appCtrl">
+                <div class="container">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+        <script src="/javascripts/notify.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/javascripts/angular.js"></script>
+        <script src="/javascripts/tools.js"></script>
+        <script src="/javascripts/{{ js }}.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,10 @@
+Time;2014/11/26 17:37:04
+VFAT2 front end-biased
+ipreampin;168
+ipreampfeed;80
+ipreampout;150
+ishaper;150
+ishaperfeed;100
+icomp;120
+vthreshold1;40
+vthreshold2;0

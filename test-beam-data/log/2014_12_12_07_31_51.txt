@@ -1,0 +1,46 @@
+Time	2014/12/12 07:31:51
+Changed parameters of VFAT2 #8
+--- Old configuration ---
+latency	126
+ipreampfeed	20
+chipid1	240
+hitcount1	0
+hitcount0	0
+vcal	24
+icomp	13
+chipid0	235
+ishaper	188
+vthreshold2	101
+ishaperfeed	123
+ipreampin	119
+vthreshold1	7
+ipreampout	79
+calphase	134
+upsetreg	0
+hitcount2	0
+ctrl0	40
+ctrl1	126
+ctrl2	219
+ctrl3	252
+--- New configuration ---
+latency	20
+ipreampfeed	80
+chipid1	240
+hitcount1	0
+hitcount0	64
+vcal	0
+icomp	75
+chipid0	235
+ishaper	150
+vthreshold2	0
+ishaperfeed	100
+ipreampin	168
+vthreshold1	15
+ipreampout	150
+calphase	0
+upsetreg	0
+hitcount2	0
+ctrl0	55
+ctrl1	0
+ctrl2	48
+ctrl3	0

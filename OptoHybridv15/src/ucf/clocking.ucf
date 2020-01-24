@@ -1,0 +1,51 @@
+# This file constraints the clocking signals
+
+## Single ended clocks
+
+NET "clk_50MHz_i"       LOC = A11; #J9; # L14_P
+NET "clk_50MHz_i" CLOCK_DEDICATED_ROUTE = FALSE;
+
+## CDCE
+
+NET "cdce_ref_o"        LOC = AD17; # J17_P
+
+NET "cdce_pwrdown_o"    LOC = AE17; # J17_N
+
+NET "cdce_sync_o"       LOC = AF16; # J5_N
+
+NET "cdce_locked_i"     LOC = AE12; # K1_N
+NET "cdce_locked_i" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "cdce_le_o"         LOC = AG15; # J1_P
+
+
+NET "cdce_clk_p_i"      LOC = AH9; # Inverted
+NET "cdce_clk_n_i"      LOC = AJ9;
+
+NET "cdce_pri_p_o"      LOC = AN10;
+NET "cdce_pri_n_o"      LOC = AP10;
+
+# QPLL
+
+NET "qpll_clk_p_i"      LOC = L10; # 40 MHz
+NET "qpll_clk_n_i"      LOC = M10;
+
+NET "qpll_alt_i"        LOC = J9; # 50 MHz clock on old design... will be removed once everybody switched to new board with QPLL
+
+
+
+
+#NET "tmds_d_p_io<0>"    LOC = AC13; # K10
+#NET "tmds_d_n_io<0>"    LOC = AC12;
+#
+#NET "tmds_d_p_io<1>"    LOC = AD12; # K11
+#NET "tmds_d_n_io<1>"    LOC = AD11;
+#
+#NET "tmds_clk_p_io"     LOC = AF11; # K5
+#NET "tmds_clk_n_io"     LOC = AE11;
+#
+#NET "hdmi_scl_io<0>"    LOC = AF15; # J1_N
+#NET "hdmi_scl_io<1>"    LOC = AG13; # K13_N
+#
+#NET "hdmi_sda_io<0>"    LOC = AD15; # J10_N
+#NET "hdmi_sda_io<1>"    LOC = AF13; # K13_P
